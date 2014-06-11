@@ -1,0 +1,7 @@
+build/
+out/
+.*
+!.gitignore
+Cobia.ipr
+Cobia.iws
+Cobia.iml
