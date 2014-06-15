@@ -5,18 +5,28 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "ACCOUNT")
+@Entity(name = "ACCOUNT")
 public class Account {
+    @Id
+    @Column(name = "CODE")
     private String code;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "password")
     private String password;
 
     public Account() {
     }
 
-    @Id
-    @Column(name = "CODE")
+    public Account(String code, String email, String password) {
+        this.code = code;
+        this.email = email;
+        this.password = password;
+    }
+
+
     public String code() {
         return code;
     }
@@ -25,7 +35,6 @@ public class Account {
         this.code = code;
     }
 
-    @Column(name = "email")
     public String email() {
         return email;
     }
@@ -34,7 +43,6 @@ public class Account {
         this.email = email;
     }
 
-    @Column(name = "password")
     public String password() {
         return password;
     }

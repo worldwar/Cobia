@@ -1,0 +1,4 @@
+GRANT ALL PRIVILEGES
+ON cobia.*
+TO 'cobiauser'@'%'
+WITH GRANT OPTION;
