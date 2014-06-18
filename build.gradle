@@ -20,6 +20,10 @@ dependencies{
     compile "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final"
 }
 
+tasks.withType(Compile) {
+    options.encoding = 'UTF-8'
+}
+
 task packageJa(type: Jar) {
     from files(sourceSets.main.output.classesDir)
     from files(sourceSets.main.output.resourcesDir)
