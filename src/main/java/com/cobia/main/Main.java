@@ -20,7 +20,9 @@ public class Main {
 		ChapterDao chapterDao = (ChapterDao)context.getBean("chapterDao");
 //		chapterDao.save(new Chapter("chapter0001112", "book456789456", 1, "荒蛮时代", "人类社会初级阶段", 1, 2));
 		PageDao pageDao = (PageDao) context.getBean("pageDao");
-		pageDao.save(new Page("page000003", "chapter0001112", 1, "http://worldwar.u.qiniudn.com/chapter02-01.png", new LocalDateTime()));
-		pageDao.save(new Page("page000004", "chapter0001112", 2, "http://worldwar.u.qiniudn.com/chapter02-02.png", new LocalDateTime()));
+//		pageDao.save(new Page("page000003", "chapter0001112", 1, "http://worldwar.u.qiniudn.com/chapter02-01.png", new LocalDateTime()));
+//		pageDao.save(new Page("page000004", "chapter0001112", 2, "http://worldwar.u.qiniudn.com/chapter02-02.png", new LocalDateTime()));
+		CommentDao commentDao = (CommentDao) context.getBean("commentDao");
+		commentDao.save(new Comment("comment000001", "999999", "page000004", 1, "if语句语法错误", new LocalDateTime()));
     }
 }

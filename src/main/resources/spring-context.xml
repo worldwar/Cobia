@@ -31,6 +31,7 @@
                 <value>com.cobia.domain.Book</value>
                 <value>com.cobia.domain.Chapter</value>
                 <value>com.cobia.domain.Page</value>
+                <value>com.cobia.domain.Comment</value>
             </list>
         </property>
         <property name="hibernateProperties">
