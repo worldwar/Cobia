@@ -2,9 +2,11 @@ package com.cobia.main;
 
 import com.cobia.dao.AccountDao;
 import com.cobia.dao.BookDao;
+import com.cobia.dao.ChapterDao;
 import com.cobia.dao.ProfileDao;
 import com.cobia.domain.Account;
 import com.cobia.domain.Book;
+import com.cobia.domain.Chapter;
 import com.cobia.domain.Profile;
 import org.joda.time.LocalDateTime;
 import org.springframework.context.ApplicationContext;
@@ -18,8 +20,10 @@ public class Main {
         ProfileDao profileDao = (ProfileDao)context.getBean("profileDao");
         //profileDao.save(new Profile("222111333", "1", "朱然", "http://www.idpmultimedia.com.au/tv/images/cutouts/cutout_dinosaur.gif"));
 		BookDao bookDao = (BookDao)context.getBean("bookDao");
-		bookDao.save(new Book("book456789456", "222111333", 1, 10, 2, "摩登时代",
-				"http://blahblah.com", "这是查理·卓别林(Charles Chaplin)一部非常优秀的作品，因为这部影片超越了其他单纯以他个人特点为卖点的悲剧性主题作品，改而反映了当时社会中一些重要的问题。",
-				new LocalDateTime(), new LocalDateTime()));
+//		bookDao.save(new Book("book456789456", "222111333", 1, 10, 2, "摩登时代",
+//				"http://blahblah.com", "这是查理·卓别林(Charles Chaplin)一部非常优秀的作品，因为这部影片超越了其他单纯以他个人特点为卖点的悲剧性主题作品，改而反映了当时社会中一些重要的问题。",
+//				new LocalDateTime(), new LocalDateTime()));
+		ChapterDao chapterDao = (ChapterDao)context.getBean("chapterDao");
+		chapterDao.save(new Chapter("chapter0001112", "book456789456", 1, "荒蛮时代", "人类社会初级阶段", 1, 2));
     }
 }
