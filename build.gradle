@@ -18,6 +18,8 @@ dependencies{
     compile "org.hibernate:hibernate-core:$hibernate_version"
     compile "mysql:mysql-connector-java:5.1.31"
     compile "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final"
+    compile 'joda-time:joda-time:2.3'
+    compile 'org.jadira.usertype:usertype.core:3.2.0.GA'
 }
 
 tasks.withType(Compile) {
