@@ -30,6 +30,7 @@
                 <value>com.cobia.domain.Profile</value>
                 <value>com.cobia.domain.Book</value>
                 <value>com.cobia.domain.Chapter</value>
+                <value>com.cobia.domain.Page</value>
             </list>
         </property>
         <property name="hibernateProperties">

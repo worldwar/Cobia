@@ -25,7 +25,6 @@ public class Account {
         this.password = password;
     }
 
-
     public String code() {
         return code;
     }
