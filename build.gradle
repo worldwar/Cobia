@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
-
+apply plugin: 'jetty'
 ext {
     spring_version = '4.0.5.RELEASE'
     hibernate_version = '4.3.5.Final'
@@ -15,15 +15,27 @@ dependencies{
     compile "junit:junit:4.11"
     compile "org.springframework:spring-orm:$spring_version"
     compile "org.springframework:spring-context:$spring_version"
+    compile "org.springframework:spring-webmvc:$spring_version"
     compile "org.hibernate:hibernate-core:$hibernate_version"
     compile "mysql:mysql-connector-java:5.1.31"
     compile "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final"
     compile 'joda-time:joda-time:2.3'
     compile 'org.jadira.usertype:usertype.core:3.2.0.GA'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile "javax.servlet:servlet-api:2.5"
 }
-
 tasks.withType(Compile) {
     options.encoding = 'UTF-8'
+}
+allprojects {
+    tasks.withType(JavaCompile) {
+        sourceCompatibility = "1.6"
+        targetCompatibility = "1.6"
+    }
+}
+tasks.withType(JavaCompile) {
+    sourceCompatibility = "1.6"
+    targetCompatibility = "1.6"
 }
 
 task packageJa(type: Jar) {
@@ -40,4 +52,17 @@ task runJar(type: JavaExec) {
     classpath = files('build/libs/cobia.jar')
     classpath += sourceSets.main.runtimeClasspath
     main = 'com.cobia.main.Main'
+}
+
+war {
+    println "source compatibility " + sourceCompatibility
+    archiveName = 'cobia.war'
+    destinationDir = file('webapps')
+}
+
+build {
+    delete file('webapps')
+}
+jettyRun{
+    contextPath = ""
 }

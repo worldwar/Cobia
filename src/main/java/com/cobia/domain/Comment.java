@@ -1,5 +1,6 @@
 package com.cobia.domain;
 
+import org.hibernate.annotations.Proxy;
 import org.hibernate.annotations.Type;
 import org.joda.time.LocalDateTime;
 
@@ -8,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity(name = "COMMENT")
+@Proxy(lazy = false)
 public class Comment {
 	@Id
 	@Column(name = "CODE")

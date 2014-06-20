@@ -1,10 +1,13 @@
 package com.cobia.domain;
 
+import org.hibernate.annotations.Proxy;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity(name = "CHAPTER")
+@Proxy(lazy = false)
 public class Chapter {
 	@Id
 	@Column(name = "CODE")
@@ -37,7 +40,7 @@ public class Chapter {
 		this.pageCount = pageCount;
 	}
 
-	public String code() {
+	public String getCode() {
 		return code;
 	}
 
@@ -45,7 +48,7 @@ public class Chapter {
 		this.code = code;
 	}
 
-	public String book() {
+	public String getBook() {
 		return book;
 	}
 
@@ -53,7 +56,7 @@ public class Chapter {
 		this.book = book;
 	}
 
-	public int index() {
+	public int getIndex() {
 		return index;
 	}
 
@@ -61,7 +64,7 @@ public class Chapter {
 		this.index = index;
 	}
 
-	public String title() {
+	public String getTitle() {
 		return title;
 	}
 
@@ -69,7 +72,7 @@ public class Chapter {
 		this.title = title;
 	}
 
-	public String intro() {
+	public String getIntro() {
 		return intro;
 	}
 
@@ -77,7 +80,7 @@ public class Chapter {
 		this.intro = intro;
 	}
 
-	public int style() {
+	public int getStyle() {
 		return style;
 	}
 
@@ -85,7 +88,7 @@ public class Chapter {
 		this.style = style;
 	}
 
-	public int pageCount() {
+	public int getPageCount() {
 		return pageCount;
 	}
 

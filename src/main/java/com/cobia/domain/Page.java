@@ -1,5 +1,6 @@
 package com.cobia.domain;
 
+import org.hibernate.annotations.Proxy;
 import org.hibernate.annotations.Type;
 import org.joda.time.LocalDateTime;
 
@@ -8,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity(name = "PAGE")
+@Proxy(lazy = false)
 public class Page {
 	@Id
 	@Column(name = "CODE")
@@ -35,7 +37,7 @@ public class Page {
 		this.createTime = createTime;
 	}
 
-	public String code() {
+	public String getCode() {
 		return code;
 	}
 
@@ -43,7 +45,7 @@ public class Page {
 		this.code = code;
 	}
 
-	public String chapter() {
+	public String getChapter() {
 		return chapter;
 	}
 
@@ -51,7 +53,7 @@ public class Page {
 		this.chapter = chapter;
 	}
 
-	public int index() {
+	public int getIndex() {
 		return index;
 	}
 
@@ -59,7 +61,7 @@ public class Page {
 		this.index = index;
 	}
 
-	public String image() {
+	public String getImage() {
 		return image;
 	}
 
@@ -67,7 +69,7 @@ public class Page {
 		this.image = image;
 	}
 
-	public LocalDateTime createTime() {
+	public LocalDateTime getCreateTime() {
 		return createTime;
 	}
 

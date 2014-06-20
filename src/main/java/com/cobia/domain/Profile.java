@@ -1,10 +1,13 @@
 package com.cobia.domain;
 
+import org.hibernate.annotations.Proxy;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity(name = "PROFILE")
+@Proxy(lazy = false)
 public class Profile {
     @Id
     @Column(name = "CODE")
@@ -26,35 +29,35 @@ public class Profile {
         this.portrait = portrait;
     }
 
-    public String code() {
-        return code;
-    }
+	public String getCode() {
+		return code;
+	}
 
-    public void setCode(String code) {
-        this.code = code;
-    }
+	public void setCode(String code) {
+		this.code = code;
+	}
 
-    public String type() {
-        return type;
-    }
+	public String getType() {
+		return type;
+	}
 
-    public void setType(String type) {
-        this.type = type;
-    }
+	public void setType(String type) {
+		this.type = type;
+	}
 
-    public String name() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public String portrait() {
-        return portrait;
-    }
+	public String getPortrait() {
+		return portrait;
+	}
 
-    public void setPortrait(String portrait) {
-        this.portrait = portrait;
-    }
+	public void setPortrait(String portrait) {
+		this.portrait = portrait;
+	}
 }

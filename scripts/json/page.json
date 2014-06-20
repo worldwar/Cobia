@@ -1,0 +1,16 @@
+{
+    "code": "page000001",
+    "image-url": "http://bhalbha.com",
+    "index", "1",
+    "book": {
+        "code": "book000001",
+        "title": "摩登时代",
+        "author": "朱然"
+    },
+    "chapter": {
+        "code": "chapter00001",
+        "title": "盘古开天辟地",
+        "count": "2"
+    },
+    "create-time": "2014-06-19 15:31:05"
+}

@@ -2,6 +2,8 @@ package com.cobia.main;
 
 import com.cobia.dao.*;
 import com.cobia.domain.*;
+import com.cobia.service.PageService;
+import com.google.gson.Gson;
 import org.joda.time.LocalDateTime;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -23,6 +25,9 @@ public class Main {
 //		pageDao.save(new Page("page000003", "chapter0001112", 1, "http://worldwar.u.qiniudn.com/chapter02-01.png", new LocalDateTime()));
 //		pageDao.save(new Page("page000004", "chapter0001112", 2, "http://worldwar.u.qiniudn.com/chapter02-02.png", new LocalDateTime()));
 		CommentDao commentDao = (CommentDao) context.getBean("commentDao");
-		commentDao.save(new Comment("comment000001", "999999", "page000004", 1, "if语句语法错误", new LocalDateTime()));
-    }
+//		commentDao.save(new Comment("comment000001", "999999", "page000004", 1, "if语句语法错误", new LocalDateTime()));
+		PageService pageService = (PageService)context.getBean("pageService");
+		String pageJson = new Gson().toJson(pageService.retrieve("page000001"));
+		System.out.println(pageJson);
+	}
 }

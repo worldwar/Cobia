@@ -1,5 +1,6 @@
 package com.cobia.domain;
 
+import org.hibernate.annotations.Proxy;
 import org.hibernate.annotations.Type;
 import org.joda.time.LocalDateTime;
 
@@ -8,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity(name = "BOOK")
+@Proxy(lazy = false)
 public class Book {
 	@Id
 	@Column(name = "CODE")
@@ -49,7 +51,7 @@ public class Book {
 		this.publishTime = publishTime;
 	}
 
-	public String code() {
+	public String getCode() {
 		return code;
 	}
 
@@ -57,7 +59,7 @@ public class Book {
 		this.code = code;
 	}
 
-	public String author() {
+	public String getAuthor() {
 		return author;
 	}
 
@@ -65,7 +67,7 @@ public class Book {
 		this.author = author;
 	}
 
-	public int status() {
+	public int getStatus() {
 		return status;
 	}
 
@@ -81,7 +83,7 @@ public class Book {
 		this.pageCount = pageCount;
 	}
 
-	public int chapterCount() {
+	public int getChapterCount() {
 		return chapterCount;
 	}
 
@@ -89,7 +91,7 @@ public class Book {
 		this.chapterCount = chapterCount;
 	}
 
-	public String title() {
+	public String getTitle() {
 		return title;
 	}
 
@@ -97,7 +99,7 @@ public class Book {
 		this.title = title;
 	}
 
-	public String cover() {
+	public String getCover() {
 		return cover;
 	}
 
@@ -105,7 +107,7 @@ public class Book {
 		this.cover = cover;
 	}
 
-	public String intro() {
+	public String getIntro() {
 		return intro;
 	}
 
@@ -113,7 +115,7 @@ public class Book {
 		this.intro = intro;
 	}
 
-	public LocalDateTime createTime() {
+	public LocalDateTime getCreateTime() {
 		return createTime;
 	}
 
@@ -121,7 +123,7 @@ public class Book {
 		this.createTime = createTime;
 	}
 
-	public LocalDateTime publishTime() {
+	public LocalDateTime getPublishTime() {
 		return publishTime;
 	}
 
