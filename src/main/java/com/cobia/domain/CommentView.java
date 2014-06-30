@@ -8,9 +8,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity(name = "COMMENT")
+@Entity(name = "COMMENT_VIEW")
 @Proxy(lazy = false)
-public class Comment {
+public class CommentView {
 	@Id
 	@Column(name = "CODE")
 	private String code;
@@ -27,11 +27,17 @@ public class Comment {
 	@Column(name = "CREATE_TIME")
 	@Type(type="org.jadira.usertype.dateandtime.joda.PersistentLocalDateTime")
 	private LocalDateTime createTime;
+	@Column(name = "AUTHOR_NAME")
+	private String authorName;
+	@Column(name = "AUTHOR_PORTRAIT")
+	private String authorPortrait;
+	@Column(name = "RECEIVER_NAME")
+	private String receiverName;
 
-	public Comment() {
+	public CommentView() {
 	}
 
-	public Comment(String code, String author, String target, int type, String receiver, String content, LocalDateTime createTime) {
+	public CommentView(String code, String author, String target, int type, String receiver, String content, LocalDateTime createTime, String authorName, String authorPortrait, String receiverName) {
 		this.code = code;
 		this.author = author;
 		this.target = target;
@@ -39,6 +45,9 @@ public class Comment {
 		this.receiver = receiver;
 		this.content = content;
 		this.createTime = createTime;
+		this.authorName = authorName;
+		this.authorPortrait = authorPortrait;
+		this.receiverName = receiverName;
 	}
 
 	public String getCode() {
@@ -69,8 +78,16 @@ public class Comment {
 		return type;
 	}
 
-	public void settype(int targetType) {
-		this.type = targetType;
+	public void setType(int type) {
+		this.type = type;
+	}
+
+	public String getReceiver() {
+		return receiver;
+	}
+
+	public void setReceiver(String receiver) {
+		this.receiver = receiver;
 	}
 
 	public String getContent() {
@@ -89,11 +106,27 @@ public class Comment {
 		this.createTime = createTime;
 	}
 
-	public String getReceiver() {
-		return receiver;
+	public String getAuthorName() {
+		return authorName;
 	}
 
-	public void setReceiver(String receiver) {
-		this.receiver = receiver;
+	public void setAuthorName(String authorName) {
+		this.authorName = authorName;
+	}
+
+	public String getAuthorPortrait() {
+		return authorPortrait;
+	}
+
+	public void setAuthorPortrait(String authorPortrait) {
+		this.authorPortrait = authorPortrait;
+	}
+
+	public String getReceiverName() {
+		return receiverName;
+	}
+
+	public void setReceiverName(String receiverName) {
+		this.receiverName = receiverName;
 	}
 }

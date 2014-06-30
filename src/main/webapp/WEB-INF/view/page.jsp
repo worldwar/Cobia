@@ -23,6 +23,14 @@
                 <div id="comic">
                     <img src="${imageUrl}" style="max-width: 400px;max-height:800px"/>
                 </div>
+
+                <div id="comments">
+                    <c:forEach var="comment" items="${comments}" >
+                    <div class="comment">
+                        ${comment.authorName}:${comment.content}
+                    </div>
+                    </c:forEach>
+                </div>
             </div>
         </div>
     </body>

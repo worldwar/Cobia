@@ -12,5 +12,20 @@
         "title": "盘古开天辟地",
         "count": "2"
     },
-    "create-time": "2014-06-19 15:31:05"
+    "create-time": "2014-06-19 15:31:05",
+    "comments": [
+        {
+            "comment-code": "comment00001",
+            "comment-content": "IF语句语法错误",
+            "comment-target": "page000001",
+            "author": "888999999",
+            "author-name": "朱然",
+            "receiver": "",
+            "receiver-name":"袁峰",
+            "comments":[
+
+            ]
+        },
+
+    ]
 }

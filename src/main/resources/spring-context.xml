@@ -33,6 +33,7 @@
                 <value>com.cobia.domain.Chapter</value>
                 <value>com.cobia.domain.Page</value>
                 <value>com.cobia.domain.Comment</value>
+                <value>com.cobia.domain.CommentView</value>
             </list>
         </property>
         <property name="hibernateProperties">

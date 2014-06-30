@@ -65,4 +65,5 @@ build {
 }
 jettyRun{
     contextPath = ""
+    httpPort=80
 }
