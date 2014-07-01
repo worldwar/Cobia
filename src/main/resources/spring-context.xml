@@ -18,7 +18,7 @@
     <bean id="datasource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://54.249.120.239:3306/cobia?useUnicode=true&amp;characterEncoding=UTF8&amp;connectionCollation=UTF8_GENERAL_CI&amp;characterSetResults=UTF8"/>
+        <property name="url" value="jdbc:mysql://54.92.19.93:3306/cobia?useUnicode=true&amp;characterEncoding=UTF8&amp;connectionCollation=UTF8_GENERAL_CI&amp;characterSetResults=UTF8"/>
         <property name="username" value="cobia-user"/>
         <property name="password" value="306"/>
     </bean>
