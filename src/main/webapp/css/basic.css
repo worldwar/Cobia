@@ -9,17 +9,29 @@ a {
     cursor: auto;
 }
 
+.rounded-corner-block {
+    border-radius: 5px;
+    margin: 20px 0px;
+    padding: 20px;
+}
+
+.basic-background-color {
+    background-color: #ADBBCC;
+}
+
 .header {
     padding: 20px 20%;
     font-family: "楷体";
     font-size: 2.4em;
-    background-color: #ADBBCC;
 }
 
 .content {
     padding: 0px 20%;
 }
 
+.drawing-info {
+    display: inline;
+}
 .book-info {
     display: inline;
 }
@@ -29,32 +41,49 @@ a {
     font-size: 2em;
     color: #114598;
 }
+
 .chapter-info {
     font-family: "黑体";
     font-size: 1.6em;
     color: #981145;
 }
 
-.comic {
-    padding: 20px;
-    margin: 10px 0px;
-    background-color: #ADBBCC;
-    border-radius: 5px;
-}
-
 .drawing {
     width: 100%;
 }
+
+.comment-area {
+    padding: 20px 10px;
+    font-family: "宋体";
+    font-size: 1.2em;
+}
+
 .comments-header {
-    margin-bottom: 40px;
     text-align: center; 
-    font-family: "宋体";
-    font-size: 1.2em;
 }
-.comment{
-    font-family: "宋体";
-    font-size: 1.2em;
+
+.comment {
+    margin: 10px 0px 0px 0px;
+    background: white;
+    border: solid 1px black;
+    padding: 10px;
 }
+
+.comment-reply {
+    margin: 0px 0px 0px 40px; 
+    border-bottom: dotted 1px #DDDDDD;
+}
+
+.comment-reply-odd {
+    border-color: #CCEEAA;
+    background-color: #F6F6F6;
+}
+
+.comment-reply-even {
+    border-color: #AACCEE;
+    background-color: white;
+}
+
 .comment-author-info {
     color: #114598;
     margin-bottom: 20px;
@@ -65,5 +94,4 @@ a {
     font-family: "宋体";
     text-align: center;
     font-size: 0.8em;
-    background-color: #ADBBCC;
 }

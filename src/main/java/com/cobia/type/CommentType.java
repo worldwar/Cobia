@@ -1,7 +1,7 @@
 package com.cobia.type;
 
 public enum CommentType {
-	PAGE_COMMENT(1), BOOK_COMMENT(2);
+	BOOK_COMMENT(1), PAGE_COMMENT(2), COMMENT_REPLY(3);
 	private int value;
 	CommentType(int value) {
 		this.value = value;

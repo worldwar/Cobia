@@ -18,6 +18,8 @@ public class CommentView {
 	private String author;
 	@Column(name = "TARGET")
 	private String target;
+	@Column(name = "REPLY_TO")
+	private String replyTo;
 	@Column(name = "TYPE")
 	private int type;
 	@Column(name = "RECEIVER")
@@ -37,10 +39,11 @@ public class CommentView {
 	public CommentView() {
 	}
 
-	public CommentView(String code, String author, String target, int type, String receiver, String content, LocalDateTime createTime, String authorName, String authorPortrait, String receiverName) {
+	public CommentView(String code, String author, String target, String replyTo, int type, String receiver, String content, LocalDateTime createTime, String authorName, String authorPortrait, String receiverName) {
 		this.code = code;
 		this.author = author;
 		this.target = target;
+		this.replyTo = replyTo;
 		this.type = type;
 		this.receiver = receiver;
 		this.content = content;
@@ -72,6 +75,14 @@ public class CommentView {
 
 	public void setTarget(String target) {
 		this.target = target;
+	}
+
+	public String getReplyTo() {
+		return replyTo;
+	}
+
+	public void setReplyTo(String replyTo) {
+		this.replyTo = replyTo;
 	}
 
 	public int getType() {

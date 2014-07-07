@@ -11,7 +11,7 @@ import java.util.List;
 public class CommentViewDao extends BaseDao<CommentView> {
 	public List<CommentView> pageComments(String code) {
 		Session session = getCustomHibernateTemplate().getSessionFactory().getCurrentSession();
-		String query = String.format( "from com.cobia.domain.CommentView where target='%s' and type=%d", code, CommentType.PAGE_COMMENT.getValue());
+		String query = String.format( "from com.cobia.domain.CommentView where target='%s'", code);
 		List list = session.createQuery(query).list();
 		return (List<CommentView>) session.createQuery(query).list();
 	}

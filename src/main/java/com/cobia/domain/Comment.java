@@ -18,6 +18,8 @@ public class Comment {
 	private String author;
 	@Column(name = "TARGET")
 	private String target;
+	@Column(name = "REPLY_TO")
+	private String replyTo;
 	@Column(name = "TYPE")
 	private int type;
 	@Column(name = "RECEIVER")
@@ -31,10 +33,11 @@ public class Comment {
 	public Comment() {
 	}
 
-	public Comment(String code, String author, String target, int type, String receiver, String content, LocalDateTime createTime) {
+	public Comment(String code, String author, String target, String replyTo, int type, String receiver, String content, LocalDateTime createTime) {
 		this.code = code;
 		this.author = author;
 		this.target = target;
+		this.replyTo = replyTo;
 		this.type = type;
 		this.receiver = receiver;
 		this.content = content;
@@ -69,8 +72,8 @@ public class Comment {
 		return type;
 	}
 
-	public void settype(int targetType) {
-		this.type = targetType;
+	public void setType(int type) {
+		this.type = type;
 	}
 
 	public String getContent() {
@@ -95,5 +98,13 @@ public class Comment {
 
 	public void setReceiver(String receiver) {
 		this.receiver = receiver;
+	}
+
+	public String getReplyTo() {
+		return replyTo;
+	}
+
+	public void setReplyTo(String replyTo) {
+		this.replyTo = replyTo;
 	}
 }
