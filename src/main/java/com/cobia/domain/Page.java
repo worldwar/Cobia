@@ -16,10 +16,8 @@ public class Page {
 	private String code;
 	@Column(name = "CHAPTER")
 	private String chapter;
-	//index is a reserved word in mysql
-	//so quote it with "``"
-	@Column(name = "`INDEX`")
-	private int index;
+	@Column(name = "POSITION")
+	private int position;
 	@Column(name = "IMAGE")
 	private String image;
 	@Column(name = "CREATE_TIME")
@@ -29,10 +27,10 @@ public class Page {
 	public Page() {
 	}
 
-	public Page(String code, String chapter, int index, String image, LocalDateTime createTime) {
+	public Page(String code, String chapter, int position, String image, LocalDateTime createTime) {
 		this.code = code;
 		this.chapter = chapter;
-		this.index = index;
+		this.position = position;
 		this.image = image;
 		this.createTime = createTime;
 	}
@@ -53,12 +51,12 @@ public class Page {
 		this.chapter = chapter;
 	}
 
-	public int getIndex() {
-		return index;
+	public int getPosition() {
+		return position;
 	}
 
-	public void setIndex(int index) {
-		this.index = index;
+	public void setPosition(int position) {
+		this.position = position;
 	}
 
 	public String getImage() {

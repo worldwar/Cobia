@@ -18,6 +18,7 @@ dependencies{
     compile "org.springframework:spring-webmvc:$spring_version"
     compile "org.hibernate:hibernate-core:$hibernate_version"
     compile "mysql:mysql-connector-java:5.1.31"
+    compile "org.postgresql:postgresql:9.3-1102-jdbc41"
     compile "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final"
     compile 'joda-time:joda-time:2.3'
     compile 'org.jadira.usertype:usertype.core:3.2.0.GA'

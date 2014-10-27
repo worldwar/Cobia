@@ -42,7 +42,7 @@ public class PageService {
 		objects.put("book", bookJson);
 		objects.put("chapter", chapterJson);
 		objects.put("image-url", page.getImage());
-		objects.put("index", String.valueOf(page.getIndex()));
+		objects.put("index", String.valueOf(page.getPosition()));
 		objects.put("create-time", DateTimeUtil.toString(page.getCreateTime()));
 		objects.put("comments", commentsJson);
 		return objects;
