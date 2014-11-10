@@ -1,0 +1,18 @@
+CREATE TABLE COMMENT (
+  CODE varchar(16) NOT NULL,
+  AUTHOR varchar(16) DEFAULT NULL,
+  TARGET varchar(16) DEFAULT NULL,
+  REPLY_TO varchar(16) DEFAULT NULL,
+  TYPE int DEFAULT NULL,
+  RECEIVER varchar(16) DEFAULT NULL,
+  CONTENT varchar(2048) DEFAULT NULL,
+  CREATE_TIME timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (CODE)
+);
+
+INSERT INTO COMMENT (CODE, AUTHOR, TARGET, REPLY_TO, TYPE, RECEIVER, CONTENT, CREATE_TIME) VALUES
+	('comment000001', '999999', 'page000004', NULL, 2, NULL, 'if语句语法错误', '2014-07-04 08:29:59'),
+	('comment000002', '0', 'page000001', NULL, 2, NULL, '楼主的作品语言生动，旋律优美，剪辑紧凑，界面友好。超级喜欢楼主，他简直是建筑界冉冉升起的新星！', '2014-07-04 
+08:30:02'),
+	('comment000003', '1', 'page000001', 'comment000002', 3, '0', '是么，呵呵', '2014-07-07 03:21:15'),
+	('comment000004', '2', 'page000001', NULL, 2, NULL, '屌', '2014-07-04 08:30:09');

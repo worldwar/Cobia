@@ -1,0 +1,15 @@
+create table BOOK(
+    CODE VARCHAR(16) PRIMARY KEY,
+    AUTHOR VARCHAR(16),
+    STATUS INT,
+    PAGE_COUNT INT,
+    CHAPTER_COUNT INT,
+    TITLE VARCHAR(128),
+    COVER VARCHAR(256),
+    INTRO VARCHAR(1024),
+    CREATE_TIME TIMESTAMP,
+    PUBLISH_TIME TIMESTAMP
+);
+
+INSERT INTO BOOK (CODE, AUTHOR, STATUS, PAGE_COUNT, CHAPTER_COUNT, TITLE, COVER, INTRO, CREATE_TIME, PUBLISH_TIME) VALUES
+	('book456789456', '222111333', 1, 10, 2, '摩登时代', 'http://blahblah.com', '这是查理·卓别林(Charles Chaplin)一部非常优秀的作品，因为这部影片超越了其他单纯以他个人特点为卖点的悲剧性主题作品，改而反映了当时社会中一些重要的问题。', '2014-06-19 14:03:07', '2014-06-19 14:03:07');

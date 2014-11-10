@@ -1,0 +1,15 @@
+create table CHAPTER(
+    CODE VARCHAR(16) PRIMARY KEY,
+    BOOK VARCHAR(16),
+    POSITION INT,
+    TITLE VARCHAR(128),
+    INTRO VARCHAR(1024),
+    STYLE INT,
+    PAGE_COUNT INT
+);
+
+
+
+INSERT INTO CHAPTER (CODE, BOOK, POSITION, TITLE, INTRO, STYLE, PAGE_COUNT) VALUES
+	('chapter0001111', 'book456789456', 1, '盘古开天辟地', '嗯哼', 1, 2),
+	('chapter0001112', 'book456789456', 1, '荒蛮时代', '人类社会初级阶段', 1, 2);
